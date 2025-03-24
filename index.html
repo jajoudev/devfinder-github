@@ -4,45 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devfinder - Github Username</title>
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/app.css" />
   </head>
   <body>
-    <h1>Devfinder</h1>
-    <form>
-      <label for="github-username">Search a github username</label>
-      <input
-        type="text"
-        id="github-username"
-        class="input-search-username"
-        name="github-username"
-      />
-      <button type="submit"></button>
-    </form>
-    <div class="github-user-card">
-      <img class="user-profile" src="" alt="" />
-      <h2 class="main-username">The Octocat</h2>
-      <span class="username">@octocat</span>
-      <p class="user-biography">This profile has no bio</p>
-      <ul>
-        <li class="repos">Repos</li>
-        <li class="repos-number">0</li>
-      </ul>
-      <ul>
-        <li class="followers">Followers</li>
-        <li class="followers-number">0</li>
-      </ul>
-      <ul>
-        <li class="following">Following</li>
-        <li class="following-number">0</li>
-      </ul>
-      <div class="username-informations">
-        <p class="username-location">San Francisco</p>
-        <a class="username-link" href="https://github.blog">https://github.blog</p>
-        <p class="username-social">Not Available</p>
-        <p class="username-enterprise">@github</p>
+    <main>
+      <div class="header-card">
+        <h1>Devfinder</h1>
+        <p class="dark-mode">Dark Mode</p>
       </div>
-    </div>
 
+      <form>
+        <label for="github-username">Search a github username</label>
+        <input
+          type="text"
+          id="github-username"
+          class="input-search-username"
+          name="github-username"
+          placeholder="Search Github Username"
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div class="github-user-card">
+        <img
+          class="user-profile"
+          src="assets/images/bitmap.png"
+          alt="Profile Picture"
+        />
+        <div class="github-user-wrapper">
+          <h2 class="main-username">The Octocat</h2>
+          <span class="username">@octocat</span>
+          <p class="user-biography">This profile has no bio</p>
+          <ul>
+            <li>
+              <p>Repos</p>
+              <br />
+              <span class="repos-number">0</span>
+            </li>
+            <li>
+              <p>Followers</p>
+              <br />
+              <span class="followers-number">0</span>
+            </li>
+            <li>
+              <p>Following</p>
+              <br />
+              <span class="following-number">0</span>
+            </li>
+          </ul>
+          <div class="user-informations">
+            <div class="user-link-info">
+              <p class="user-location"></p>
+              <a class="user-link" href="https://github.blog"></a>
+            </div>
+            <div class="user-contact-info">
+              <p class="usern-social"></p>
+              <p class="user-enterprise"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./assets/js/secret.js"></script>
     <script src="assets/js/app.js"></script>
   </body>

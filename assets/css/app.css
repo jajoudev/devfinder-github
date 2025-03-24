@@ -1,1 +1,145 @@
 @import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --charleston-green: #222731;
+  --azure: #0079ff;
+  --queen-blue: #4b6a9b;
+  --zircon: #f6f8ff;
+  --white: #fefefe;
+  --space-mono-font: "Space Mono";
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--space-mono-font);
+}
+
+body {
+  background-color: var(--zircon);
+}
+
+body.dark-mode {
+    --queen-blue: white;
+    --zircon: #141D2F;
+    --white: #1E2A47;
+    --charleston-green: white;
+}
+
+.dark-mode {
+    color: var(--charleston-green);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: lowercase;
+  color: var(--charleston-green);
+}
+
+form label {
+  display: none;
+}
+
+form input {
+  background-color: var(--white);
+  border: none;
+  border-radius: 16px;
+  width: 640px;
+  padding: 12px;
+  color: var(--queen-blue);
+}
+
+form button {
+  border: none;
+  background-color: var(--azure);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.github-user-card {
+  background-color: var(--white);
+  margin-top: 20px;
+  width: 730px;
+  height: 419px;
+  display: flex;
+  border-radius: 16px;
+  padding: 32px 0px 24px 44px;
+}
+
+.github-user-wrapper {
+  margin-left: 52px;
+}
+
+.user-profile {
+  width: 117px;
+  border-radius: 100%;
+  height: 117px;
+}
+
+.main-username {
+  margin-top: 0px;
+}
+
+.username {
+  color: var(--azure);
+}
+
+.user-biography {
+  color: var(--queen-blue);
+}
+
+ul {
+  background-color: var(--zircon);
+  display: flex;
+  padding-left: 0px;
+  gap: 54px;
+  padding: 16px;
+  width: 480px;
+  height: 85px;
+  border-radius: 12px;
+}
+
+li {
+  list-style-type: none;
+  color: var(--queen-blue);
+}
+
+li p {
+  margin: 0px;
+}
+
+li span {
+  font-weight: bold;
+  color: var(--charleston-green);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.user-informations div:nth-child(2) {
+    margin-top: 16px;
+}
+
+.user-link-info, .user-contact-info {
+    display: flex;
+    gap: 44px;
+    color: var(--queen-blue);
+}
+
+svg {
+    margin-right: 14px;
+    padding-left: 0px;
+}
+
+.user-link {
+    margin-top: 16px;
+    text-decoration: none;
+}
