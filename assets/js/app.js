@@ -9,7 +9,7 @@ $darkMode.addEventListener('click', () => {
   } else {
     document.body.classList.add('dark-mode')
   }
-})  
+})
 
 function updatedDataUsername(githubData) {
   const $userPicture = document.querySelector(".user-profile");
@@ -45,10 +45,34 @@ function updatedDataUsername(githubData) {
 }
 
 function resetData() {
-  if ($inputSearch.value === "") {
-    $usernameLogin.textContent = "@nofind"
-    // $userPicture.textContent = "Il n'y a pas de photo de profil";
+  const $userPicture = document.querySelector(".user-profile");
+  const $usernameMain = document.querySelector(".main-username");
+  const $usernameLogin = document.querySelector(".username");
+  const $usernameBio = document.querySelector(".user-biography");
+  const $reposNumber = document.querySelector(".repos-number");
+  const $followersNumber = document.querySelector(".followers-number");
+  const $followingNumber = document.querySelector(".following-number");
+  const $usernameLocation = document.querySelector(".user-location");
+  const $usernameLink = document.querySelector(".user-link");
+  const $usernameSocial = document.querySelector(".user-social");
+  const $usernameEnterprise = document.querySelector(".user-enterprise");
+
+  if (!$inputSearch.value) {
+    $usernameLogin.textContent = "@nofind";
+    $usernameMain.textContent = "No user found";
     $usernameBio.textContent = "This profile has no bio";
+    $reposNumber.textContent = "0";
+    $followersNumber.textContent = "0";
+    $followingNumber.textContent = "0";
+    $usernameLocation.textContent = "Unknown";
+    $usernameLink.textContent = "Not available";
+    $usernameLink.removeAttribute("href");
+    $usernameSocial.textContent = "Not available";
+    $usernameEnterprise.textContent = "Not available";
+
+    $userPicture.src = "https://via.placeholder.com/150"; 
+
+    console.log("Aucun utilisateur trouvé");
   }
 }
 
@@ -61,7 +85,13 @@ async function getUserInfo(searchedUser) {
 
   const userData = await res.json();
   console.log(userData);
-  updatedDataUsername(userData);
+
+
+  if(res.status === 404) {
+    resetData()
+  } else {
+    updatedDataUsername(userData);
+  }
 }
 
 $form.addEventListener("submit", (event) => {
@@ -69,5 +99,4 @@ $form.addEventListener("submit", (event) => {
 
   let searchValue = $inputSearch.value.trim();
   getUserInfo(searchValue);
-  resetData();
 });

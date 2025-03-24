@@ -13,6 +13,7 @@
 * {
   box-sizing: border-box;
   font-family: var(--space-mono-font);
+  transition: all .4s;
 }
 
 body {
