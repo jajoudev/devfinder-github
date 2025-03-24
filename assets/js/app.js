@@ -71,8 +71,6 @@ function resetData() {
     $usernameEnterprise.textContent = "Not available";
 
     $userPicture.src = "https://via.placeholder.com/150"; 
-
-    console.log("Aucun utilisateur trouvé");
   }
 }
 

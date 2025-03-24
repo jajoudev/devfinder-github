@@ -10,25 +10,25 @@
   --space-mono-font: "Space Mono";
 }
 
+body.dark-mode {
+  --queen-blue: white;
+  --zircon: #141d2f;
+  --white: #1e2a47;
+  --charleston-green: white;
+}
+
 * {
   box-sizing: border-box;
   font-family: var(--space-mono-font);
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 body {
   background-color: var(--zircon);
 }
 
-body.dark-mode {
-    --queen-blue: white;
-    --zircon: #141D2F;
-    --white: #1E2A47;
-    --charleston-green: white;
-}
-
 .dark-mode {
-    color: var(--charleston-green);
+  color: var(--charleston-green);
 }
 
 main {
@@ -126,21 +126,22 @@ li span {
 }
 
 .user-informations div:nth-child(2) {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
-.user-link-info, .user-contact-info {
-    display: flex;
-    gap: 44px;
-    color: var(--queen-blue);
+.user-link-info,
+.user-contact-info {
+  display: flex;
+  gap: 44px;
+  color: var(--queen-blue);
 }
 
 svg {
-    margin-right: 14px;
-    padding-left: 0px;
+  margin-right: 14px;
+  padding-left: 0px;
 }
 
 .user-link {
-    margin-top: 16px;
-    text-decoration: none;
+  margin-top: 16px;
+  text-decoration: none;
 }
